@@ -8,13 +8,22 @@
 
 .row {
     display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 
 .column {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex: 50%;
+}
+
+#column2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .loginForm {
@@ -74,8 +83,11 @@ h1 {
     margin-top: 10px;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.signUp:hover {
     background-color: #2e471a;
+    cursor: pointer;
+    color: #fff;
 }
 
 .btn {
@@ -185,6 +197,17 @@ h1 {
     padding-bottom: 20px;
 }
 
+.signUp {
+    font-size: 13px;
+    padding: 8px 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border: none;
+    transition: background 0.2s;
+    margin-left: 10px;
+}
 
 @media (max-width: 600px) {
     .loginForm {

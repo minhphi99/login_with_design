@@ -8,14 +8,22 @@
 
 .row {
     display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 
 .column {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex: 50%;
-    padding: 0 16px;
+}
+
+#column2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .signupForm {
@@ -28,12 +36,12 @@
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-    padding: 32px 24px;
+    padding: 25px 24px;
 }
 
 h1 {
     font-size: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 15px;
 }
 
 .input,
@@ -56,7 +64,7 @@ h1 {
 .signup {
     display: flex;
     flex: 1;
-    padding-bottom: 24px;
+    padding-bottom: 10px;
 }
 
 .signUp {
@@ -103,7 +111,7 @@ h1 {
 
 .terms-label {
     font-size: 11px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
 }
 
 .pw-group {
@@ -117,7 +125,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-bottom: 32px;
+    padding-bottom: 10px;
 }
 
 .hr-wrapper hr {
@@ -145,8 +153,8 @@ h1 {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 20px;
-    padding-top: 24px;
+    padding-bottom: 15px;
+    padding-top: 20px;
     gap: 12px;
 }
 
