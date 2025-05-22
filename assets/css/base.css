@@ -26,91 +26,24 @@
     object-fit: cover;
 }
 
-.loginForm {
+.form {
     width: 404px;
-    height: 583px;
+    max-width: 95vw;
+    min-width: 260px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    padding: 25px 24px;
 }
 
 h1 {
     font-size: 32px;
-    padding-bottom: 10px;
-}
-
-#access {
-    font-size: 16px;
-    font-weight: 500;
-    padding-bottom: 50px;
-}
-
-.input {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 10px;
-}
-
-.input:focus {
-    outline: none;
-    border: 1px solid #3A5B22;
-}
-
-.input:focus::placeholder {
-    color: transparent;
-}
-
-.input::placeholder {
-    color: #A0A0A0;
-}
-
-
-.login-btn {
-    width: 100%;
-    /* Span the row */
-    background-color: #3A5B22;
-    /* Green background */
-    color: #fff;
-    /* White text */
-    border: none;
-    border-radius: 8px;
-    padding: 12px 0;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-top: 10px;
-}
-
-.login-btn:hover,
-.signUp:hover {
-    background-color: #2e471a;
-    cursor: pointer;
-    color: #fff;
-}
-
-.btn {
-    font-size: 13px;
-    padding: 8px 24px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f5f5f5;
-    border: none;
-    transition: background 0.2s;
-}
-
-.btn:hover {
-    background-color: #2e471a;
-    cursor: pointer;
-    color: #fff;
-}
-
-.logo {
-    width: 18px;
-    height: 18px;
+    padding-bottom: 15px;
 }
 
 .form-group {
@@ -125,10 +58,19 @@ h1 {
     margin-bottom: 6px;
 }
 
-.form-group input {
-    font-size: 14px;
+.input {
+    padding: 12px 12px 12px 0;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
     width: 100%;
-    padding-bottom: 15px;
+    transition: border 0.2s, background 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border: 1.5px solid #3A5B22;
+    background: #f5fff5;
 }
 
 .pw-group {
@@ -138,11 +80,35 @@ h1 {
     justify-content: space-between;
 }
 
+.error-message {
+    color: #FF0000;
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    padding-bottom: 10px;
+}
+
+.main-btn {
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: bold;
+    flex: 1;
+    border-radius: 8px;
+    background-color: #3A5B22;
+    color: white;
+    border: none;
+    transition: background 0.2s;
+}
+
 .hr-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .hr-wrapper hr {
@@ -154,7 +120,7 @@ h1 {
 
 .hr-text {
     color: #000;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: normal;
     white-space: nowrap;
 }
@@ -169,11 +135,67 @@ h1 {
     gap: 12px;
 }
 
+.signIn {
+    font-size: 13px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f5f5;
+    border: none;
+    transition: background 0.2s;
+}
+
+.logo {
+    width: 18px;
+    height: 18px;
+}
+
+.signIn:hover {
+    background-color: #2e471a;
+    cursor: pointer;
+    color: #fff;
+}
+
+.main-btn:hover,
+.login-btn:hover,
+.signUp:hover {
+    background-color: #2e471a;
+    cursor: pointer;
+    color: #fff;
+}
+
 .switch {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+}
+
+/* css for signup */
+.signupForm span {
+    font-size: 14px;
+    align-items: center;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    accent-color: #3A5B22;
+}
+
+.terms-label {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+/* css for login */
+#access {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 50px;
 }
 
 #forgot {
@@ -181,37 +203,13 @@ h1 {
     font-size: 10px;
 }
 
-.error-message {
-    color: #FF0000;
-    font-size: 12px;
-    padding-bottom: 10px;
-}
-
-.login {
-    display: flex;
-    flex: 1;
-    padding-bottom: 30px;
-}
-
 #check {
-    font-size: 9px;
+    font-size: 11px;
     padding-bottom: 20px;
 }
 
-.signUp {
-    font-size: 13px;
-    padding: 8px 34px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    background: #f5f5f5;
-    border: none;
-    transition: background 0.2s;
-    margin-left: 10px;
-}
-
 @media (max-width: 600px) {
-    .loginForm {
+    .form {
         width: 98vw;
         min-width: unset;
         max-width: unset;
@@ -222,11 +220,6 @@ h1 {
         font-size: 24px;
     }
 
-    #access {
-        font-size: 13px;
-        padding-bottom: 30px;
-    }
-
     .btn {
         font-size: 12px;
         padding: 8px;
@@ -235,10 +228,6 @@ h1 {
     .logo {
         width: 14px;
         height: 14px;
-    }
-
-    .hr-wrapper {
-        padding-bottom: 30px;
     }
 
     .buttons {

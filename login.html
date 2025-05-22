@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
 
 </head>
 
 <body>
     <div class="row">
         <div class="column" id="column1">
-            <form class="loginForm" id="loginForm">
+            <form class="form" id="loginForm">
                 <h1 class="welcome">Welcome back!</h1>
                 <div class="info">
                     <p id="access">Enter your credential to access your account</p>
@@ -33,8 +32,8 @@
                     <div class="error-message" id="error"></div>
                     <input type="checkbox" id="remember">
                     <label id="check" for="remember">Remember for 30 days</label>
-                    <div class="login">
-                        <button type="submit" class="login-btn">Login</button>
+                    <div class="main">
+                        <button type="submit" class="main-btn">Login</button>
                     </div>
                     <div class="hr-wrapper">
                         <hr>
@@ -42,16 +41,15 @@
                         <hr>
                     </div>
                     <div class="buttons">
-                        <button type="button" class="btn"><img src="assets/imgs/google_icon.png" alt="Google logo"
+                        <button class="signIn"><img src="assets/imgs/google_icon.png" alt="Google logo"
                                 class="logo">Sign
                             in with Google</button>
-                        <button type="button" class="btn"> <img src="assets/imgs/apple_icon.png" alt="Apple logo"
-                                class="logo">
+                        <button class="signIn"> <img src="assets/imgs/apple_icon.png" alt="Apple logo" class="logo">
                             Sign in with Apple</button>
                     </div>
                     <div class="switch">
                         <span>Don't have an account?</span>
-                        <a href="signup.html" class="signUp">Sign Up</a>
+                        <a href="signup.html" class="signIn">Sign Up</a>
                     </div>
                 </div>
             </form>
