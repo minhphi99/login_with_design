@@ -1,27 +1,35 @@
 const form = document.getElementById('signupForm');
-const nameinput = document.getElementById('name-input');
-const email = document.getElementById('email-input');
-const password = document.getElementById('password-input');
 const errorDiv = document.getElementById('error');
 
 form.addEventListener('submit', function (e) {
     let message = [];
-    if (!nameinput.value.trim()) {
+
+    const username = document.getElementById('name-input').value;
+    const email = document.getElementById('email-input').value;
+    const password = document.getElementById('password-input').value;
+
+    //regex form validation
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    if (!username) {
         message.push('Name is required');
     }
-    if (!email.value.trim()) {
-        message.push('Email is required');
+    if (!regexEmail.test(email)) {
+        message.push('Email must be valid');
     }
-    if (password.value.length < 6) {
-        message.push('Password must be at least 6 characters long');
+    if (!regexPassword.test(password)) {
+        message.push('Password must be at least 8 characters long, only contains letters and digits');
     }
 
     if (message.length > 0) {
         e.preventDefault();
         errorDiv.innerHTML = message.join('<br>');
         errorDiv.style.display = 'block';
+        form.reset();
     } else {
         errorDiv.innerHTML = '';
         errorDiv.style.display = 'none';
+        alert('signed up successfully')
     }
 });
