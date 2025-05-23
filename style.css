@@ -76,13 +76,17 @@ ul li {
     flex: 1;
 }
 
-.checked span:first-child {
+span.checked {
+    text-decoration: line-through;
+}
+
+/* .checked span:first-child {
     text-decoration: line-through;
 }
 
 li::nth-child {
     text-decoration: none;
-}
+} */
 
 .close {
     font-size: 22px;
